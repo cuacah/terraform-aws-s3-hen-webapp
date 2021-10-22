@@ -13,7 +13,10 @@ resource "aws_s3_bucket" "bucket" {
         {
             "Sid": "PublicReadGetObject",
             "Effect": "Allow",
-            "Principal": "*",
+            "Principal": {
+              "AWS": [
+                "197831068840"]
+            },
             "Action": [
                 "s3:GetObject"
             ],
